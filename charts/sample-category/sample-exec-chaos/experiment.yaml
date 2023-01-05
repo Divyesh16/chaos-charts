@@ -58,7 +58,14 @@ spec:
 
     - name: RAMP_TIME
       value: ''
-      
+
+    - name: CONTAINER_RUNTIME
+      value: "containerd"
+
+    # provide the socket file path
+    - name: SOCKET_PATH
+      value: "/var/run/containerd.sock"
+
     labels:
       name: sample-exec-chaos
       app.kubernetes.io/part-of: litmus

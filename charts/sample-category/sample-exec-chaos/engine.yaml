@@ -27,9 +27,11 @@ spec:
             - name: CHAOS_INTERVAL
               value: '10'
 
-            # - name: CHAOS_INJECT_COMMAND
-            #   value: 'test'
+            # provide the name of container runtime, it supports docker, containerd, crio
+            - name: CONTAINER_RUNTIME
+              value: "containerd"
 
-            # - name: LIB
-            #   value: ''
+            # provide the socket file path
+            - name: SOCKET_PATH
+              value: "/var/run/containerd.sock"
               
